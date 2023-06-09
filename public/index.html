@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasking Manager</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css">
+    <!-- cutom css -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <div class="container">
+        <form>
+            <h1>Task Manager</h1>
+            <div class="input-group">
+                <input class="inputtag" type="text" placeholder="eg. read a book">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+            <div class="error-alert "></div>
+        </form>
+        <div class="task-container">
+            <div class="loading">Loading...</div>
+            <div class="tasks">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    line-height: 1.45;
+    color: hsl(0, 05, 0%);
+    background-color: hsl(100, 100%, 100%);
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+button{
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 1rem;
+    border: 1px solid red;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+form{
+    margin-top: 5rem;
+    border-radius : 5px;
+    padding: 2.5rem 2rem;
+    max-width: 50%;
+    width: 45%;
+    text-align: center;
+    display: grid;
+    row-gap: 1.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid rgba(149, 157, 165, 0.2);
+}
+.input-group{
+    display: flex;
+}
+input{
+    padding: 1rem;
+    border: 1px solid gray  ;
+    border-radius : 3px;
+    width: 85%;
+    max-width : 85%;
+    font-size: 1.3rem;
+    background : hsl(0, 2%, 95%);
+}
+input:focus{
+    border: 1px solid black;
+    outline: 1px solid black;
+}
+.submit-btn{
+    padding: 0.2em 0.8em;
+    flex-basis: 20%;
+    border-radius : 3px;
+    color: hsl(100, 100%, 100%);
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    background: hsl(218, 86%, 50%);
+    border: 1px solid hsl(218, 86%, 50%);
+}
+.submit-btn:hover{
+    background: hsl(218, 86%, 70%);
+}
+.error-alert{
+    justify-self: start;
+    font-size: 1.2rem;
+    opacity: 0.75;
+}
+.loading{
+    align-self: start;
+    margin-bottom: 1rem;
+}
+.task-container{
+    max-width: 45%;
+    width: 45%;
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+.task, #task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0.7rem 0.8rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid rgba(149, 157, 165, 0.2);
+}
+.icon-group{
+    display: flex;
+    column-gap: 0.5rem;
+}
+.icon-group > * {
+    cursor: pointer;
+}
+i{
+    pointer-events: none;
+}
+.error-alert{
+    color: hsl(340, 50%, 50%);
+    display: none;
+}
+
+.loading{
+    display: none;
+}
+
+
+/* --------------------- */
+/* edit page */
+/* --------------------- */
+.form-container{
+    display: grid;
+    row-gap: 1rem;
+    text-align: left;
+}
+
+.form-control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.task-edit-name{
+    padding: 0.4em;
+    width: 85%;
+    max-width: 85%;
+}
+.task-edit-completed{
+    width: 5%;
+    max-width: 5%;
+    cursor: pointer;
+}
+.task-edit-completed:focus{
+    outline: none;
+    border: none;
+}
+.back-btn{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: hsl(0, 0%, 10%);
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+}
+.single-task-id, .task-edit-name{
+    flex-basis: 60%;
+    max-width: 60%;
+}
+.single-task-id{
+    text-align: left;
+}
+h3{
+    flex-basis: 30%;
+    max-width: 30%;
+}
+.edit-btn{
+    background-color: hsla(218, 85%, 20%);
+    color: white;
+    display: inline-block;
+    padding: 0.5em 0em;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+.edit-btn:hover{
+    background-color: hsla(218, 59%, 20%, 0.63);
+}
+.error-edit-alert{
+    text-align: center;
+    display: none;
+    color: hsl(340, 50%, 50%);
+}
+.success {
+    color:  hsl(120, 50%, 50%);
+}
+.completed{
+    background-color : hsl(0, 6%, 85%)!important;
+}
+.completed  > h3 {
+    text-decoration: line-through;
+}
+/* -------------------------responsive------------------- */
+@media(max-width : 768px){
+    .container{
+        padding-inline: 2rem;
+        align-items: center;
+    }
+    form, .task-container{
+        width: 90%;
+        max-width: 90%;
+    }
+}
+@media(max-width : 560px){
+    .container{
+        padding-inline: 0.2rem;
+    }
+}
